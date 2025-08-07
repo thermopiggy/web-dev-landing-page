@@ -107,6 +107,21 @@
   background: #0b3d2e; /* тъмно зелен */
   color: white;
 }
+header img.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 240px;
+  filter: invert(1);
+  z-index: 1;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.4); /* зелено сияние */
+}
+
+header img.logo:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.7); /* по-силно сияние при hover */
+}
 
 </style>
 
