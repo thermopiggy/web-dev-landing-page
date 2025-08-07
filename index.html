@@ -48,10 +48,13 @@
     }
 
     header img.logo {
-      height: 140px;
+      height: 420px;
       filter: invert(1);
       margin: 0 auto 1rem auto;
       display: block;
+      box-shadow:
+        0 0 20px rgba(255,255,255,0.4),
+        0 0 40px rgba(255,255,255,0.2);
     }
 
     header h1 {
@@ -59,8 +62,8 @@
       font-size: 1.8rem;
       color: white;
       text-shadow:
-        0 0 4px rgba(255, 255, 255, 0.3),
-        0 0 6px rgba(255, 255, 255, 0.2);
+        0 0 6px rgba(255, 255, 255, 0.4),
+        0 0 10px rgba(255, 255, 255, 0.3);
     }
 
     .nav-buttons {
@@ -132,12 +135,12 @@
     }
 
     .project-item {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 60px;
       align-items: center;
       justify-content: center;
       gap: 1rem;
       margin-bottom: 1.5rem;
-      flex-wrap: nowrap;
     }
 
     .project-item a {
@@ -179,7 +182,7 @@
     </div>
   </header>
 
-  <div class="container">
+  <div class="container" id="about">
     <p>Предлагаме изграждане и поддръжка на уебсайтове за онлайн магазини, заведения за хранене и пиене, занаятчии и изобщо всякакви малки бизнеси.</p>
 
     <ul>
@@ -216,7 +219,7 @@
 
     <div class="cta">
       <a href="https://wa.me/359988823462?text=Здравейте! Интересувам се от изработка на уебсайт за моя бизнес." target="_blank">
-        Поръчай сега по WhatsApp
+        поипитай в WhatsApp
       </a>
     </div>
   </div>
