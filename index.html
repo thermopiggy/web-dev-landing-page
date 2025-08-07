@@ -15,7 +15,9 @@
       background: #0a0a0a;
       color: #111;
       position: relative;
-      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: auto;
+
     }
 
     body::before {
@@ -62,18 +64,17 @@
     header img.logo:hover {
       box-shadow: 0 0 30px rgba(0, 255, 0, 0.7);
     }
-
-       header h1 {
-      margin: 160px 0 0 0;    
+    header h1 {
+      margin: 160px 0 0 0;
       font-size: 2rem;
       position: relative;
       z-index: 2;
       color: white;
       text-shadow:
-        0 0 5px white,
-        0 0 10px white,
-        0 0 15px white,
-        0 0 20px rgba(255,255,255,0.8);
+        0 0 5px rgba(255, 255, 255, 0.5),
+        0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
     }
 
     .container {
@@ -171,6 +172,11 @@
       <a href="https://wa.me/YOURNUMBER" target="_blank">Поръчай сега по WhatsApp</a>
     </div>
   </div>
+  <section id="contacts" style="padding: 2rem; background: #f4f4f4; text-align: center;">
+    <h2 style="margin-bottom: 1rem; font-size: 1.5rem;">Контакти</h2>
+    <p>📧 Email: <a href="mailto:connected@hotmail.com">connected@hotmail.com</a></p>
+    <p>📞 Телефон: <a href="tel:+359988823462">+359988 823 462</a></p>
+  </section>
 
   <footer>
     &copy; 2025 – Уеб решения за малкия бизнес в Банско
