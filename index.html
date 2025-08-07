@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Connected.com</title>
 
-  <!-- Montserrat шрифт -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
@@ -43,30 +42,25 @@
 
     header {
       background: #0b3d2e;
-      position: relative;
       text-align: center;
-      padding: 6rem 1rem;
+      padding: 2rem 1rem 3rem 1rem;
+      position: relative;
     }
 
     header img.logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      height: 80px;
+      height: 100px;
       filter: invert(1);
-      z-index: 2;
+      margin: 0 auto 1rem auto;
+      display: block;
     }
 
     header h1 {
-      margin: 140px 1rem 0 1rem;
+      margin: 0;
       font-size: 1.8rem;
-      position: relative;
-      z-index: 2;
       color: white;
       text-shadow:
         0 0 4px rgba(255, 255, 255, 0.3),
         0 0 6px rgba(255, 255, 255, 0.2);
-      text-align: center;
     }
 
     .nav-buttons {
@@ -132,6 +126,38 @@
       display: inline-block;
     }
 
+    .projects {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .project-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .project-item a {
+      text-decoration: none;
+      color: #0b3d2e;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .project-item img {
+      height: 100px;
+      width: 100px;
+      object-fit: contain;
+      transition: transform 0.2s ease;
+    }
+
+    .project-item img:hover {
+      transform: scale(1.05);
+    }
+
     footer {
       text-align: center;
       font-size: 0.9rem;
@@ -166,6 +192,28 @@
 
     <p>Еднократна цена: <span class="highlight">от 500 до 1100 лв</span>, според броя езици и сложност.</p>
 
+    <div class="projects" id="projects">
+      <h2>Изпълнени проекти</h2>
+
+      <div class="project-item">
+        <a href="https://thermopiggy.github.io/amirugumi-wonders/index-bg.html" target="_blank">
+          Амигуруменичетата
+        </a>
+        <a href="https://thermopiggy.github.io/amirugumi-wonders/index-bg.html" target="_blank">
+          <img src="qr1.png" alt="QR код за Амигуруменичетата" />
+        </a>
+      </div>
+
+      <div class="project-item">
+        <a href="https://thermopiggy.github.io/Pirinski-Bilki/#" target="_blank">
+          Планински билки Даутов
+        </a>
+        <a href="https://thermopiggy.github.io/Pirinski-Bilki/#" target="_blank">
+          <img src="qr2.png" alt="QR код за Планински билки Даутов" />
+        </a>
+      </div>
+    </div>
+
     <div class="cta">
       <a href="https://wa.me/YOURNUMBER" target="_blank">Поръчай сега по WhatsApp</a>
     </div>
@@ -178,7 +226,7 @@
   </section>
 
   <footer>
-    &copy; 2025 – Уеб решения за малкия бизнес в Банско
+    &copy; 2025 – Уеб решения за малкия бизнес 
   </footer>
 </body>
 </html>
