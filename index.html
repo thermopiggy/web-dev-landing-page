@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Уебсайт за Вашето заведение в Банско</title>
+  <title>Connected.com</title>
 
   <!-- Montserrat шрифт -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -63,11 +63,17 @@
       box-shadow: 0 0 30px rgba(0, 255, 0, 0.7);
     }
 
-    header h1 {
-      margin: 160px 0 0 0;
+       header h1 {
+      margin: 160px 0 0 0;    
       font-size: 2rem;
       position: relative;
       z-index: 2;
+      color: white;
+      text-shadow:
+        0 0 5px white,
+        0 0 10px white,
+        0 0 15px white,
+        0 0 20px rgba(255,255,255,0.8);
     }
 
     .container {
@@ -109,6 +115,29 @@
       color: #888;
       margin-top: 4rem;
     }
+    .nav-buttons {
+  margin-top: 1.5rem;
+  z-index: 2;
+  position: relative;
+}
+
+.nav-buttons a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  color: #0b3d2e;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-buttons a:hover {
+  background: #0b3d2e;
+  color: white;
+}
+
   </style>
 </head>
 
@@ -116,6 +145,13 @@
   <header>
     <img class="logo" src="connected.logo.png" alt="Connected logo">
     <h1>Направете бизнеса си откриваем!</h1>
+    <div class="nav-buttons">
+  <a href="#about">За нас</a>
+  <a href="#projects">Изпълнени проекти</a>
+  <a href="#contacts">Контакти</a>
+</div>
+
+    
   </header>
 
   <div class="container">
