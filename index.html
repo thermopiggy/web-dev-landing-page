@@ -4,41 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Уебсайт за Вашето заведение в Банско</title>
+
+  <!-- Montserrat шрифт -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
-      background: #f4f4f4;
-      color: #333;
+      font-family: 'Montserrat', sans-serif;
+      background: #0a0a0a;
+      color: #111;
+      position: relative;
+      overflow: hidden;
     }
-    header {
-      background: #222;
+
+    body::before {
+      content: "0101010011010100110010101010100110";
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 14vw;
+      color: rgba(255,255,255,0.015);
+      animation: binmove 20s linear infinite;
+      white-space: nowrap;
+      z-index: 0;
+    }
+
+    @keyframes binmove {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    ::selection {
+      background: #0b3d2e;
       color: white;
-      padding: 2rem 1rem;
-      text-align: center;
     }
+
+    header {
+      background: #0b3d2e;
+      position: relative;
+      text-align: center;
+      padding: 6rem 1rem;
+    }
+
+    header img.logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 240px;
+      filter: invert(1);
+      z-index: 1;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+    }
+
+    header img.logo:hover {
+      box-shadow: 0 0 30px rgba(0, 255, 0, 0.7);
+    }
+
     header h1 {
       margin: 0;
       font-size: 2rem;
+      position: relative;
+      z-index: 2;
     }
+
     .container {
       max-width: 800px;
       margin: auto;
       padding: 2rem;
       background: white;
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      color: #111;
     }
+
     .highlight {
-      color: #e63946;
+      color: #0b3d2e;
       font-weight: bold;
     }
+
     ul {
       padding-left: 1.5rem;
     }
+
     .cta {
       text-align: center;
       margin-top: 2rem;
     }
+
     .cta a {
       background: #25D366;
       color: white;
@@ -48,6 +102,7 @@
       border-radius: 5px;
       display: inline-block;
     }
+
     footer {
       text-align: center;
       font-size: 0.9rem;
@@ -55,104 +110,34 @@
       margin-top: 4rem;
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<style>
-  body {
-    font-family: 'Montserrat', sans-serif;
-    background: #0a0a0a;
-    color: #f4f4f4;
-    position: relative;
-    overflow: hidden;
-  }
-
-  body::before {
-    content: "0101010011010100110010101010100110";
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 14vw;
-    color: rgba(255,255,255,0.015);
-    animation: binmove 20s linear infinite;
-    white-space: nowrap;
-    z-index: 0;
-  }
-
-  @keyframes binmove {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
-
-  header {
-    background: #0b3d2e;
-    position: relative;
-    text-align: center;
-    padding: 6rem 1rem 6rem 1rem;
-  }
-
-  header img.logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 120px;
-    z-index: 1;
-  }
-
-  header h1 {
-    margin: 0;
-    font-size: 2rem;
-    position: relative;
-    z-index: 2;
-  ::selection {
-  background: #0b3d2e; /* тъмно зелен */
-  color: white;
-}
-header img.logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 240px;
-  filter: invert(1);
-  z-index: 1;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 20px rgba(0, 255, 0, 0.4); /* зелено сияние */
-}
-
-header img.logo:hover {
-  box-shadow: 0 0 30px rgba(0, 255, 0, 0.7); /* по-силно сияние при hover */
-}
-
-</style>
-
 </head>
+
 <body>
   <header>
-    <h1>Направете биснеса си откриваем!</h1>
-    <header>
     <img class="logo" src="connected.logo.png" alt="Connected logo">
-    </header>
+    <h1>Направете биснеса си откриваем!</h1>
+  </header>
 
   <div class="container">
-    <p>Предлагам изграждане и поддръжка на уебсайтове за онлайн магазини,заведения за хранене и пиене,занаятчии и всякакви други малки бизнеси.</p>
+    <p>Предлагам изграждане и поддръжка на уебсайтове за онлайн магазини, заведения за хранене и пиене, занаятчии и всякакви малки бизнеси.</p>
 
     <ul>
-      <li>Меню на <strong>3 или 4 езика</strong> – подходящо за туристи</li>
+      <li>Меню на <strong>3 или 4 езика</strong> </li>
       <li><strong>Бутон за поръчка по WhatsApp</strong> – изпраща поръчката с кошница и съобщение</li>
       <li><strong>Хостинг без месечни такси</strong> – GitHub Pages</li>
       <li>Оптимизиран за мобилни устройства</li>
       <li>Собствен QR код – за меню, стикери или визитки</li>
     </ul>
 
-    <p>Еднократна цена: <span class="highlight">от 500 до 1100 лв</span>, според броя езици и сложност.</p>
+    <p>Еднократна цена: от 500 до 1100 лв, според броя езици и сложност.</p>
 
     <div class="cta">
-      <a href="https://wa.me/YOURNUMBER" target="_blank">Поръчай сега по WhatsApp</a>
+      <a href="https://wa.me/YOURNUMBER" target="_blank">инфо в WhatsApp</a>
     </div>
   </div>
 
   <footer>
-    &copy; 2025 – Уеб решения за малкия бизнес в Банско
+    &copy; 2025 – Уеб решения за малкия бизнес 
   </footer>
 </body>
 </html>
