@@ -46,15 +46,23 @@
       padding: 2rem 1rem 3rem 1rem;
       position: relative;
     }
+header img.logo {
+  height: 420px;
+  filter: invert(1);
+  margin: 0 auto 1rem auto;
+  display: block;
+  box-shadow:
+    0 0 20px rgba(255,255,255,0.4),
+    0 0 40px rgba(255,255,255,0.2);
+}
 
-    header img.logo {
-      height: 420px;
-      filter: invert(1);
-      margin: 0 auto 1rem auto;
-      display: block;
-      box-shadow:
-        0 0 20px rgba(255,255,255,0.4),
-        0 0 40px rgba(255,255,255,0.2);
+/* Ограничаваме височината на логото на мобилни устройства */
+@media screen and (max-width: 600px) {
+  header img.logo {
+    height: 180px;
+  }
+}
+
     }
 
     header h1 {
