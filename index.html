@@ -11,22 +11,20 @@
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-     body {
-  background: linear-gradient(270deg, #ff6b6b, #f7d794, #1dd1a1);
-  background-size: 600% 600%;
-  animation: gradientMove 20s ease infinite;
-}
-
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
       color: #111;
       position: relative;
       overflow-x: hidden;
       overflow-y: auto;
+
+      background: linear-gradient(270deg, #ff6b6b, #f7d794, #1dd1a1);
+      background-size: 600% 600%;
+      animation: gradientMove 20s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     body::before {
@@ -57,20 +55,21 @@
       padding: 2rem 1rem 3rem 1rem;
       position: relative;
     }
-    header img.logo {
-      margin-bottom: 2rem;
-      height: 400px;
-      filter: invert(1);
-      margin: 0 auto 1rem auto;
+
+    header video.logo {
       display: block;
-      box-shadow:
-        0 0 20px rgba(255,255,255,0.4),
-        0 0 40px rgba(255,255,255,0.2);
+      width: 100%;       /* винаги цяла ширина */
+      height: auto;      /* автоматична височина */
+      max-height: none;  /* няма ограничение */
+      margin: 0 auto 1rem;
+      background: #000;
+      box-shadow: 0 0 20px rgba(255,255,255,0.4),
+                  0 0 40px rgba(255,255,255,0.2);
     }
 
-    @media screen and (max-width: 600px) {
-      header img.logo {
-        height: 180px;
+    @media (min-width: 1024px) {
+      header video.logo {
+        max-width: 1200px;  /* лимит за големи екрани */
       }
     }
     
@@ -83,35 +82,35 @@
         0 0 16px rgba(0,0,0,0.1);
     }
 
-   .nav-buttons {
-  margin-top: 1.5rem;
-  z-index: 2;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0 1rem;
-}
+    .nav-buttons {
+      margin-top: 1.5rem;
+      z-index: 2;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0 1rem;
+    }
 
-.nav-buttons a {
-  display: inline-block;      /* за да няма излишни правоъгълници */
-  padding: 0.5rem 1rem;       /* ширината идва от текста + падинг */
-  background: #f0f0f0;        /* светлосиво */
-  color: black;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  text-align: center;
-  transition: 0.3s;
-  border: 1px solid #ddd;     /* фин контур */
-}
+    .nav-buttons a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #f0f0f0;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+      transition: 0.3s;
+      border: 1px solid #ddd;
+    }
 
-.nav-buttons a:hover {
-  background: #e0e0e0;        /* малко по-тъмно сиво при hover */
-  color: black;
-  border-color: black;
-}
+    .nav-buttons a:hover {
+      background: #e0e0e0;
+      color: black;
+      border-color: black;
+    }
 
     .container {
       max-width: 800px;
@@ -190,7 +189,10 @@
 
 <body>
   <header>
-    <img class="logo" src="connected.logo.png" alt="Connected logo" />
+    <video class="logo" autoplay muted loop playsinline>
+      <source src="hippie.mp4" type="video/mp4">
+      Вашият браузър не поддържа видео.
+    </video>
     <h1>Connected.com</h1>
     <div class="nav-buttons">
       <a href="#services">услуги</a>
@@ -199,49 +201,54 @@
     </div>
   </header>
 
-<div class="container" id="services">
-  <h2>УСЛУГИ</h2>
+  <div class="container" id="services">
+    <h2>УСЛУГИ</h2>
+    <ul>
+      <li><strong>изработка и поддръжка на уебсайт</strong></li>
+      <li><strong>AI чатбот</strong> – дизайн, интеграция, глас, аватар</li>
+      <li><strong>Бутон WhatsApp</strong> – изпраща цялата поръчка в съобщение</li>
+      <li><strong>Хостинг без месечни такси</strong> – GitHub Pages</li>
+      <li><strong>Оптимизация</strong> за мобилни устройства</li>
+      <li><strong>QR код</strong> – за меню, стикери или визитки</li>
+    </ul>
+    <p><span class="highlight">от 500 до 1100 лв</span>, според сложността на изработка.</p>
+  </div>
 
-  <ul>
-    <li><strong>изработка и поддръжка на уебсайт</strong></li>
-    <li><strong>AI чатбот</strong> – дизайн, интеграция, глас, аватар</li>
-    <li><strong>Бутон WhatsApp</strong> – изпраща цялата поръчка в съобщение</li>
-    <li><strong>Хостинг без месечни такси</strong> – GitHub Pages</li>
-    <li><strong>Оптимизация</strong> за мобилни устройства</li>
-    <li><strong>QR код</strong> – за меню, стикери или визитки</li>
-  </ul>
+  <div class="projects" id="projects">
+    <h2>Изпълнени проекти</h2>
 
-  <p><span class="highlight">от 500 до 1100 лв</span>, според сложността на изработка.</p>
-</div>
-
-
-    <div class="projects" id="projects">
-      <h2>Изпълнени проекти</h2>
-
-      <div class="project-item">
-        <a href="https://thermopiggy.github.io/amirugumi-wonders/index-bg.html" target="_blank">
-          Амигуруменичетата
-        </a>
-        <a href="https://thermopiggy.github.io/amirugumi-wonders/index-bg.html" target="_blank">
-          <img src="qr1.png" alt="QR код за Амигуруменичетата" />
-        </a>
-      </div>
-
-      <div class="project-item">
-        <a href="https://thermopiggy.github.io/Pirinski-Bilki/#" target="_blank">
-          Планински билки Даутов
-        </a>
-        <a href="https://thermopiggy.github.io/Pirinski-Bilki/#" target="_blank">
-          <img src="qr2.png" alt="QR код за Планински билки Даутов" />
-        </a>
-      </div>
-    </div>
-
-    <div class="cta">
-      <a href="https://wa.me/359988823462?text=Здравейте! Интересувам се от изработка на уебсайт за моя бизнес." target="_blank">
-        поипитай в WhatsApp
+    <div class="project-item">
+      <a href="https://thermopiggy.github.io/amirugumi-wonders/index-bg.html" target="_blank">
+        Амигуруменичетата
+      </a>
+      <a href="https://thermopiggy.github.io/amirugumi-wonders/index-bg.html" target="_blank">
+        <img src="qr1.png" alt="QR код за Амигуруменичетата" />
       </a>
     </div>
+
+    <div class="project-item">
+      <a href="https://thermopiggy.github.io/Pirinski-Bilki/#" target="_blank">
+        Планински билки Даутов
+      </a>
+      <a href="https://thermopiggy.github.io/Pirinski-Bilki/#" target="_blank">
+        <img src="qr2.png" alt="QR код за Планински билки Даутов" />
+      </a>
+    </div>
+
+    <div class="project-item">
+      <a href="https://thermopiggy.github.io/freestreamhub/" target="_blank">
+        FreeStreamHub
+      </a>
+      <a href="https://thermopiggy.github.io/freestreamhub/" target="_blank">
+        <img src="qr3.png" alt="QR код за FreeStreamHub" />
+      </a>
+    </div>
+  </div>
+
+  <div class="cta">
+    <a href="https://wa.me/359988823462?text=Здравейте! Интересувам се от изработка на уебсайт за моя бизнес." target="_blank">
+      поипитай в WhatsApp
+    </a>
   </div>
 
   <section id="contacts" style="padding: 2rem; background: #f4f4f4; text-align: center;">
