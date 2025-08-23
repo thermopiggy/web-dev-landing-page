@@ -11,7 +11,18 @@
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background: #0a0a0a;
+     body {
+  background: linear-gradient(270deg, #ff6b6b, #f7d794, #1dd1a1);
+  background-size: 600% 600%;
+  animation: gradientMove 20s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
       color: #111;
       position: relative;
       overflow-x: hidden;
