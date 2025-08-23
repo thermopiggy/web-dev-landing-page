@@ -72,37 +72,35 @@
         0 0 16px rgba(0,0,0,0.1);
     }
 
-    .nav-buttons {
-      margin-top: 1.5rem;
-      z-index: 2;
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0 1rem;
-    }
+   .nav-buttons {
+  margin-top: 1.5rem;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
 
-    .nav-buttons a {
-      flex: 1 1 100px;
-      min-width: 100px;
-      max-width: 200px;
-      padding: 0.5rem;
-      background: white;
-      color: black;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      text-align: center;
-      transition: 0.3s;
-      border: 1px solid #ddd;
-    }
+.nav-buttons a {
+  display: inline-block;      /* за да няма излишни правоъгълници */
+  padding: 0.5rem 1rem;       /* ширината идва от текста + падинг */
+  background: #f0f0f0;        /* светлосиво */
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid #ddd;     /* фин контур */
+}
 
-    .nav-buttons a:hover {
-      background: white;
-      color: black;
-      border-color: black;
-    }
+.nav-buttons a:hover {
+  background: #e0e0e0;        /* малко по-тъмно сиво при hover */
+  color: black;
+  border-color: black;
+}
 
     .container {
       max-width: 800px;
@@ -185,6 +183,7 @@
     <h1>Connected.com</h1>
     <div class="nav-buttons">
       <a href="#about">за нас</a>
+      <a href="#services">услуги</a>
       <a href="#projects">проекти</a>
       <a href="#contacts">контакти</a>
     </div>
