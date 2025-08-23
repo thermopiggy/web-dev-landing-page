@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Connected.com</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #0a0a0a;
+      color: #111;
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    body::before {
+      content: "0101010011010100110010101010100110";
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 14vw;
+      color: rgba(255,255,255,0.015);
+      animation: binmove 20s linear infinite;
+      white-space: nowrap;
+      z-index: 0;
+    }
+
+    @keyframes binmove {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    ::selection {
+      background: white;
+      color: black;
+    }
+
+    header {
+      background: white;
+      text-align: center;
+      padding: 2rem 1rem 3rem 1rem;
+      position: relative;
+    }
+    header img.logo {
+      margin-bottom: 2rem;
+      height: 400px;
+      filter: invert(1);
+      margin: 0 auto 1rem auto;
+      display: block;
+      box-shadow:
+        0 0 20px rgba(255,255,255,0.4),
+        0 0 40px rgba(255,255,255,0.2);
+    }
+
+    @media screen and (max-width: 600px) {
+      header img.logo {
+        height: 180px;
+      }
+    }
+    
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: black;
+      text-shadow:
+        0 0 8px rgba(0,0,0,0.2),
+        0 0 16px rgba(0,0,0,0.1);
+    }
+
+    .nav-buttons {
+      margin-top: 1.5rem;
+      z-index: 2;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0 1rem;
+    }
+
+    .nav-buttons a {
+      flex: 1 1 100px;
+      min-width: 100px;
+      max-width: 200px;
+      padding: 0.5rem;
+      background: white;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+      transition: 0.3s;
+      border: 1px solid #ddd;
+    }
+
+    .nav-buttons a:hover {
+      background: white;
+      color: black;
+      border-color: black;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem 1rem;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      color: #111;
+    }
+
+    .highlight {
+      color: black;
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .cta a {
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .projects {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .project-item {
+      display: grid;
+      grid-template-columns: 1fr 60px;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-item a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .project-item img {
+      height: 60px;
+      width: 60px;
+      object-fit: contain;
+      transition: transform 0.2s ease;
+    }
+
+    .project-item img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 4rem;
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="connected.logo.png" alt="Connected logo" />
+    <h1>Направете бизнеса си откриваем!</h1>
+    <div class="nav-buttons">
+      <a href="#about">за нас</a>
+      <a href="#projects">доволни клиенти</a>
+      <a href="#contacts">контакти</a>
+    </div>
+  </header>
+
+  <div class="container" id="about">
+    <p>Предлагаме изграждане и поддръжка на уебсайтове за онлайн магазини, заведения за хранене и пиене, занаятчии и изобщо всякакви малки бизнеси.</p>
+
+    <ul>
+      <li>Меню на <strong>3 или 4 езика</strong> – подходящо за туристи</li>
+      <li><strong>Бутон за поръчка по WhatsApp</strong> – изпраща поръчката с кошница и съобщение</li>
+      <li><strong>Хостинг без месечни такси</strong> – GitHub Pages</li>
+      <li>Оптимизиран за мобилни устройства</li>
+      <li>Собствен QR код – за меню, стикери или визитки</li>
+    </ul>
+
+    <p>Еднократна цена: <span class="highlight">от 500 до 1100 лв</span>, според броя езици и сложност.</p>
+
+    <div class="projects" id="projects">
+      <h2>Изпълнени проекти</h2>
+
+      <div class="project-item">
+        <a href="https://thermopiggy.github.io/amirugumi-wonders/index-bg.html" target="_blank">
+          Амигуруменичетата
+        </a>
+        <a href="https://thermopiggy.github.io/amirugumi-wonders/index-bg.html" target="_blank">
+          <img src="qr1.png" alt="QR код за Амигуруменичетата" />
+        </a>
+      </div>
+
+      <div class="project-item">
+        <a href="https://thermopiggy.github.io/Pirinski-Bilki/#" target="_blank">
+          Планински билки Даутов
+        </a>
+        <a href="https://thermopiggy.github.io/Pirinski-Bilki/#" target="_blank">
+          <img src="qr2.png" alt="QR код за Планински билки Даутов" />
+        </a>
+      </div>
+    </div>
+
+    <div class="cta">
+      <a href="https://wa.me/359988823462?text=Здравейте! Интересувам се от изработка на уебсайт за моя бизнес." target="_blank">
+        поипитай в WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <section id="contacts" style="padding: 2rem; background: #f4f4f4; text-align: center;">
+    <h2 style="margin-bottom: 1rem; font-size: 1.5rem;">Контакти</h2>
+    <p>📧 Email: <a href="mailto:connected@hotmail.com">connected@hotmail.com</a></p>
+    <p>📞 Телефон: <a href="tel:+359988823462">+359 988 823 462</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 – Уеб решения за малкия бизнес
+  </footer>
+</body>
+</html>
